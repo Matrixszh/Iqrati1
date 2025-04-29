@@ -35,7 +35,7 @@ const AppointmentForm = () => {
   const onSubmit = (data: FormFields) => {
     emailjs
       .send(service!, template!, data, key)
-      .then((response) => {
+      .then(() => {
         reset();
         console.log("Form data:", data);
         toast.success("Form Submitted Successfully!");
@@ -118,7 +118,7 @@ const AppointmentForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-custom-gradient text-white p-2 rounded-full"
+          className="w-full bg-black text-white p-2 rounded-full"
         >
           Contact Us
         </button>

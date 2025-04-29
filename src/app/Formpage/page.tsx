@@ -63,7 +63,7 @@ export default function Home() {
       <section>
         <LogoSlider />
       </section>
-      <section className="mb-[5vh] md:mb-[45vh]">
+      <section className="mb-[5vh] md:mb-[50vh]">
       <h1 className="text-center font-semibold text-3xl sticky top-0">
           Fill Out The Form{" "}
         </h1>
