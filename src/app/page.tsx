@@ -66,13 +66,13 @@ export default function Home() {
       <section>
         <LogoSlider />
       </section>
-      <section>
+      <section id="about">
         <Intro />
       </section>
       <section className="w-full h-[50vh] md:h-[30vh] ">
         <SlidingCards/>
       </section>
-      <section className="mb-12">
+      <section className="mb-12" id="FAQ">
         <AccordionInfo />
       </section>
       <section className="flex flex-col items-center justify-center gap-10 ">

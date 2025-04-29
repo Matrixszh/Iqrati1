@@ -1,10 +1,6 @@
 import Link from "next/link";
-import Intro from "@/components/Intro";
 import LogoSlider from "@/components/LogoSlider";
-import ScrollCard from "@/components/ScrollCard";
-import AccordionInfo from "@/components/AccordionInfo";
 import Footer from "@/components/Footer";
-import SlidingCards from "@/components/SlidingCards";
 import AppointmentForm from "./AppointmentForm";
 
 export default function Home() {

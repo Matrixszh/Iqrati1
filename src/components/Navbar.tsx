@@ -18,9 +18,9 @@ const NavBar = () => {
 
   const menuItems = [
     { title: "HOME", href: "#HomeSlider" },
-    { title: "ABOUT US", href: "#About" },
-    { title: "PORTFOLIO", href: "#Showcase" },
-    { title: "CONTACT", href: "#Contact" },
+    { title: "ABOUT US", href: "#about" },
+    { title: "FAQ", href: "#FAQ" },
+    { title: "CONTACT", href: "/Formpage" },
   ];
 
   useEffect(() => {
