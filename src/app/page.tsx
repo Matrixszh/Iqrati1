@@ -49,7 +49,7 @@ export default function Home() {
               className="text-white md:text-7xl lg:text-7xl text-4xl text-center px-12 md:px-6 "
               id="intro_main"
             >
-              A One Stop Solution To All Your Event Needs
+              Smart Solutions for a Digital World
             </p>
 
             <div id="intro_button">

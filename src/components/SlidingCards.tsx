@@ -33,20 +33,22 @@ const SlidingCards = () => {
       title: 'Fintech',
       subtitle: 'And Finance',
       icon: <FaChartLine />,
+      description:'We offer tech-driven solutions for the fintech and finance sector, simplifying payments, analytics, and digital services for businesses',
     },
     {
       title: 'Education',
       icon: <FaGraduationCap />,
+      description:'We deliver innovative tech solutions for the education sector, enhancing learning experiences and streamlining administrative processes.',
     },
     {
       title: 'State/Local',
       subtitle: 'Government',
       icon: <FaUniversity />,
+      description:'We provide tech solutions for the government sector, optimizing operations, improving service delivery, and enhancing citizen engagement .',
     },
   ];
 
-  const description =
-    "Studio Envious. Using OpenAI And ElevenLabs Wasn’t Financially Sustainable Given Their Game’s Unexpected Popularity And Replayability. What’s More, Playroom (Part Of Little Umbrella) Experienced Significant Issues With AI Latency.";
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -57,7 +59,7 @@ const SlidingCards = () => {
     <div className="min-h-screen  px-4 py-12">
       {/* Mobile: One card with arrows */}
       <div className="sm:hidden flex flex-col items-center gap-4">
-        <Card {...cards[currentIndex]} description={description} />
+        <Card {...cards[currentIndex]}  />
         <div className="flex justify-center gap-4 text-2xl text-gray-700">
           <button onClick={prevCard} aria-label="Previous">
             <FiChevronLeft />
@@ -72,7 +74,7 @@ const SlidingCards = () => {
       <div className="hidden sm:flex justify-center">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cards.map((card, index) => (
-            <Card key={index} {...card} description={description} />
+            <Card key={index} {...card} />
           ))}
         </div>
       </div>

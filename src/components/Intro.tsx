@@ -25,9 +25,7 @@ const Intro= () => {
         {/* Right Section: Description */}
         <div className="w-full md:w-1/2">
           <p className="text-lg md:text-lg font-normal text-justify text-black">
-            This podcast offers you an insight about the host Abdullah and his
-            struggles to achieve what is now by measures the most immaculate
-            form of success. Join Abdullah Ghaffar as he engages with the brightest minds in the real estate industry! Discover actionable tips, inspiring stories, and insider knowledge from top performers and experts in real estate investing and raising capital.
+          At Iqrati, our journey began with a simple idea — to make technology accessible, efficient, and empowering for businesses of all sizes. Fueled by passion, innovation, and a deep understanding of client needs, we turned challenges into opportunities and ideas into solutions. Over time, our commitment to excellence, transparency, and results helped us earn trust, build strong partnerships, and grow into the tech powerhouse we are today.
           </p>
         </div>
       </div>
