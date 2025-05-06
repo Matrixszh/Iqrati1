@@ -17,9 +17,9 @@ const NavBar = () => {
   };
 
   const menuItems = [
-    { title: "HOME", href: "#HomeSlider" },
-    { title: "ABOUT US", href: "#about" },
-    { title: "FAQ", href: "#FAQ" },
+    { title: "HOME", href: "/" },
+    { title: "ABOUT US", href: "/#about" },
+    { title: "FAQ", href: "/#FAQ" },
     { title: "CONTACT", href: "/Formpage" },
   ];
 

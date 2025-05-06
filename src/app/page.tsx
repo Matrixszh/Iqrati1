@@ -63,10 +63,10 @@ export default function Home() {
         </section>
       </main>
 
-      <section>
+      <section id="about">
         <LogoSlider />
       </section>
-      <section id="about">
+      <section>
         <Intro />
       </section>
       <section className="w-full h-[50vh] md:h-[60vh] ">
