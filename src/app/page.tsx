@@ -69,7 +69,7 @@ export default function Home() {
       <section id="about">
         <Intro />
       </section>
-      <section className="w-full h-[50vh] md:h-[30vh] ">
+      <section className="w-full h-[50vh] md:h-[60vh] ">
         <SlidingCards/>
       </section>
       <section className="mb-12" id="FAQ">
