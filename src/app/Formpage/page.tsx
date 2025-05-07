@@ -50,7 +50,7 @@ export default function Home() {
             </p>
 
             <div id="intro_button">
-              <Link href="/Form">
+              <Link href="#form">
                 <button className="px-6 py-3 bg-white text-black rounded-full shadow-md hover:bg-none hover:bg-[#334960] hover:text-white border transition duration-300">
                   Contact Us
                 </button>
@@ -63,7 +63,7 @@ export default function Home() {
       <section>
         <LogoSlider />
       </section>
-      <section className="mb-[5vh] md:mb-[50vh]">
+      <section className="mb-[5vh] md:mb-[50vh]" id="form">
       <h1 className="text-center font-semibold text-3xl sticky top-0">
           Fill Out The Form{" "}
         </h1>
