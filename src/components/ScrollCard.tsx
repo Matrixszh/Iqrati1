@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import { projects } from "@/lib/data/projects";
+import { projects } from "@/lib/data/proof";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const ScrollCard = () => {
