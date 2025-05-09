@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/lib/data/proof";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import Link from "next/link";
+
 
 const ScrollCard = () => {
   const cardContainer = useRef(null);
