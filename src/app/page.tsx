@@ -80,6 +80,13 @@ export default function Home() {
           Proven Projects And Their Results{" "}
         </h1>
         <ScrollCard />
+        <div className="md:mt-0 -mt-40 py-5 flex flex-col justify-center items-center" id="intro_button">
+              <Link href="/Formpage">
+                <button className="px-6 py-3 bg-white text-black rounded-full border border-black shadow-md hover:bg-none hover:bg-[#334960] hover:text-white border transition duration-300">
+                  Contact Us
+                </button>
+              </Link>
+            </div>
       </section>
       <Footer />
     </div>

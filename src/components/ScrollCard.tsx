@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/lib/data/proof";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import Link from "next/link";
 
 const ScrollCard = () => {
   const cardContainer = useRef(null);
@@ -26,7 +27,10 @@ const ScrollCard = () => {
       {projects.map((item, index) => (
         <ProjectCard key={index} item={item} index={index} />
       ))}
+            
     </motion.div>
+    
+    
   );
 };
 

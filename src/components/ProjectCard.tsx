@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import React, { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProjectCard = ({ item, index }: { item: any; index: number }) => {
@@ -50,10 +51,13 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
             <CardContent className="md:text-left text-center text-base">
               <p>{item.description}</p>
             </CardContent>
+
           </div>
         </Card>
       </motion.div>
     </div>
+    
+        
   );
 };
 

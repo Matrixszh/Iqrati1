@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-black md:-mt-[20vh] md:h-[30vh]  h-[28vh] relative">
-      <div className="flex md:gap-[40vw] gap-[10vw] px-6 md:pl-30 py-10 z-10">
+      <div className="flex md:gap-[60vw] gap-[10vw] px-6 md:pl-30 py-10 z-10">
         <div>
           <Image
             src="/ex2.png"
@@ -16,10 +16,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-2">
           <p className="text-white text-sm font-bold 2xl:text-xl">
-            IQRATI Mobile App
+          +1 (331) 246-6413
           </p>
-          <p className="text-white text-sm font-normal 2xl:text-xl">
-            List and manage your business with the Desis
+          <p className="text-white text-sm font-bold 2xl:text-xl">
+            dummy@email.com
           </p>
         </div>
       </div>
