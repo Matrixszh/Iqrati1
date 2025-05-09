@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import React, { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
-import Link from "next/link";
+
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProjectCard = ({ item, index }: { item: any; index: number }) => {
