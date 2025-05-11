@@ -9,7 +9,7 @@ import {
 
 const AccordionInfo = () => {
   return (
-    <div className="border-b-2 border-black">
+    <div className="border-b-2 border-black ">
       {projects.map((item, index) => (
         <Accordion
           key={index}
@@ -19,9 +19,9 @@ const AccordionInfo = () => {
         >
           <AccordionItem
             value={`${index}`}
-            className="group group-data-[state=open]:bg-black hover:bg-black "
+            className="group group-data-[state=open]:bg-black hover:bg-black"
           >
-            <AccordionTrigger className="text-2xl [&>svg]:h-8 [&>svg]:w-8 group-data-[state=open]:bg-black group-data-[state=open]:text-white hover:text-white rounded-none px-10 md:pl-14">
+            <AccordionTrigger className="text-2xl hover:cursor-pointer [&>svg]:h-8 [&>svg]:w-8 group-data-[state=open]:bg-black group-data-[state=open]:text-white hover:text-white rounded-none px-10 md:pl-14">
               {item.heading}
             </AccordionTrigger>
             <AccordionContent className="group-data-[state=open]:bg-black group-data-[state=open]:text-white px-10 md:pl-14">

@@ -30,18 +30,18 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           backgroundColor: `rgba(255, 255, 255, ${bgOpacityValue})`,
         }}
       >
-        <Card className="md:w-[50vw] 2xl:w-[50vw] w-[80vw] md:h-[300px] 2xl:h-[500px] flex md:flex-row flex-col justify-between md:px-10 items-center border border-black">
-          <div className="md:w-[35%] 2xl w-[90%]">
+        <Card className="md:w-[55vw] 2xl:w-[50vw] w-[80vw] md:h-[400px] 2xl:h-[500px] flex md:flex-row flex-col justify-between md:px-10 items-center border border-black hover:cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div className="md:w-[40%] 2xl w-[90%]">
             <Image
               src={item.image}
-              height={400}
-              width={400}
+              height={500}
+              width={500}
               quality={100}
               alt="project"
-              className="w-full h-[300px] 2xl:h-[300px]"
+              className="w-full h-[300px] rounded-xl "
             />
           </div>
-          <div className="space-y-4 md:w-[65%] w-full">
+          <div className="space-y-4 md:w-[60%] w-full">
             <CardHeader className="">
               <CardTitle className="md:text-[40px] text-3xl md:text-left text-center">
                 {item.heading}

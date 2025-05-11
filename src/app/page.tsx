@@ -8,7 +8,13 @@ import SlidingCards from "@/components/SlidingCards";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white relative">
+      <Link href="/Formpage">
+        <button className="fixed bottom-6 right-6 z-50 px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-[#334960] transition duration-300 border border-white md:px-8 md:py-4 md:bottom-8 md:right-8 hover:cursor-pointer">
+          Contact Us
+        </button>
+      </Link>
+
       <main className="overflow-hidden">
         <section
           className="sticky top-0 z-10 h-screen overflow-hidden bg-black"
@@ -37,7 +43,7 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
 
-          <div className="relative flex flex-col items-center justify-center h-screen md:gap-[8vh] gap-[8vh]">
+          <div className="relative flex flex-col items-center justify-center h-screen space-y-8 md:space-y-12">
             <p
               className="text-md md:text-lg lg:text-2xl font-normal text-center text-white md:max-w-[80vw] max-w-[90vw]"
               id="intro_content"
@@ -45,51 +51,42 @@ export default function Home() {
               DISCOVER IQRATI
             </p>
             <p
-              className="text-white md:text-7xl lg:text-7xl text-4xl text-center px-12 md:px-6 "
+              className="text-white md:text-7xl lg:text-7xl text-4xl text-center px-12 md:px-6"
               id="intro_main"
             >
               Smart Solutions for a Digital World
             </p>
-
-            <div id="intro_button">
-              <Link href="/Formpage">
-                <button className="px-6 py-3 bg-white text-black rounded-full shadow-md hover:bg-none hover:bg-[#334960] hover:text-white border transition duration-300">
-                  Contact Us
-                </button>
-              </Link>
-            </div>
           </div>
         </section>
       </main>
 
-      <section id="about">
+      <section id="about" className="py-12 md:py-16">
         <LogoSlider />
       </section>
-      <section>
+
+      <section className="py-12 md:py-16">
         <Intro />
       </section>
-      <section className="w-full flex flex-col items-center justify-center">
-        <SlidingCards />
-      </section>
-      <section className="mb-12" id="FAQ">
-        <AccordionInfo />
-      </section>
-      <section className="flex flex-col items-center justify-center gap-10 ">
-        <h1 className="text-center font-semibold text-[26px] sticky top-0">
-          Proven Projects And Their Results{" "}
-        </h1>
-        <ScrollCard />
-        <div
-          className="md:mt-0 -mt-60 mb-10 py-5 flex flex-col justify-center items-center"
-          id="intro_button"
-        >
-          <Link href="/Formpage">
-            <button className="px-6 py-3 bg-white text-black rounded-full border border-black shadow-md hover:bg-none hover:bg-[#334960] hover:text-white transition duration-300">
-              Contact Us
-            </button>
-          </Link>
+
+      <section className="py-12 md:py-16">
+        <div className="w-full flex flex-col items-center justify-center">
+          <SlidingCards />
         </div>
       </section>
+
+      <section id="FAQ" className="py-12 md:py-16">
+        <AccordionInfo />
+      </section>
+
+      <section className="pt-12 md:pt-16 pb-6 md:pb-8 -mb-[20vh] md:-mb-[30vh]">
+        <div className="flex flex-col items-center justify-center gap-10">
+          <h1 className="text-center font-semibold text-[26px] px-6">
+            Proven Projects And Their Results
+          </h1>
+          <ScrollCard />
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

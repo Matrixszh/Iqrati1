@@ -25,7 +25,7 @@ interface CardProps {
 
 const ServiceCard = ({ title, subtitle, icon, description }: CardProps) => {
   return (
-    <Card className="w-full h-[280px] bg-gradient-to-b from-[#1f3c5b] to-[#68a0d4] text-white border-none shadow-lg overflow-hidden">
+    <Card className="w-full h-[280px] bg-gradient-to-b from-[#1f3c5b] to-[#68a0d4] text-white border-none shadow-lg overflow-hidden hover:cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <div className="flex-1">
