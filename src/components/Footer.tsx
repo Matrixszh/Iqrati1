@@ -19,7 +19,7 @@ const Footer = () => {
             +1 (331) 246-6413
           </p>
           <p className="text-white text-sm font-bold 2xl:text-xl">
-            dummy@email.com
+            Faizanali.35157@gmail.com
           </p>
         </div>
       </div>
