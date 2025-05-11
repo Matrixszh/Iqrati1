@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("HOME");
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,26 +25,57 @@ const NavBar = () => {
     { title: "CONTACT", href: "/Formpage" },
   ];
 
+  // Set active item based on current pathname
   useEffect(() => {
+    if (pathname === "/") {
+      setActiveItem("HOME");
+    } else if (pathname === "/Formpage") {
+      setActiveItem("CONTACT");
+    }
+  }, [pathname]);
+
+  useEffect(() => {
+    // Only handle scroll-based active states on the home page
+    if (pathname !== "/") {
+      return;
+    }
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const sections = menuItems.map(item => document.querySelector(item.href));
-      
-      sections.forEach((section, index) => {
-        if (section instanceof HTMLElement) {
-          const sectionTop = section.offsetTop - 100; // Adjust offset as needed
-          const sectionBottom = sectionTop + section.offsetHeight;
-          
-          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            setActiveItem(menuItems[index].title);
+
+      // Only check sections that exist on the current page (have hash fragments)
+      const sectionsToCheck = menuItems.filter((item) =>
+        item.href.includes("#")
+      );
+
+      sectionsToCheck.forEach((item) => {
+        const selector = item.href.split("#")[1];
+        if (selector) {
+          const section = document.getElementById(selector);
+
+          if (section instanceof HTMLElement) {
+            const sectionTop = section.offsetTop - 100; // Adjust offset as needed
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (
+              scrollPosition >= sectionTop &&
+              scrollPosition < sectionBottom
+            ) {
+              setActiveItem(item.title);
+            }
           }
         }
       });
+
+      // Set HOME as active when at the top of the page
+      if (scrollPosition < 100) {
+        setActiveItem("HOME");
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -60,7 +93,7 @@ const NavBar = () => {
     <header className="fixed top-0 w-full z-50 bg-black shadow-md">
       <div className="mx-auto flex items-center justify-between py-4 px-5 lg:px-12">
         <p className="text-[32px] font-regular font-Jost uppercase tracking-[1.00px] text-white lg:hidden whitespace-nowrap">
-         IQRATI
+          IQRATI
         </p>
         {/* Hamburger menu for mobile */}
         <button onClick={toggleMenu} className="lg:hidden">
@@ -91,7 +124,7 @@ const NavBar = () => {
           </div>
 
           <p className="text-[64px] font-regular uppercase tracking-[1.00px] text-white mx-[46px] whitespace-nowrap">
-          IQRATI
+            IQRATI
           </p>
 
           <div className="flex items-center gap-[46px]">

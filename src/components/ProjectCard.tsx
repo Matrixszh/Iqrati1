@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
 
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProjectCard = ({ item, index }: { item: any; index: number }) => {
   const cardRef = useRef(null);
@@ -31,7 +30,7 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           backgroundColor: `rgba(255, 255, 255, ${bgOpacityValue})`,
         }}
       >
-        <Card className="md:w-[50vw] 2xl:w-[50vw] w-[80vw] md:h-[300px] 2xl:h-[500px] flex md:flex-row flex-col justify-between md:px-10 items-center border border-2 border-black">
+        <Card className="md:w-[50vw] 2xl:w-[50vw] w-[80vw] md:h-[300px] 2xl:h-[500px] flex md:flex-row flex-col justify-between md:px-10 items-center border border-black">
           <div className="md:w-[35%] 2xl w-[90%]">
             <Image
               src={item.image}
@@ -39,10 +38,10 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
               width={400}
               quality={100}
               alt="project"
-              className="w-full h-[200px] 2xl:h-[300px]"
+              className="w-full h-[300px] 2xl:h-[300px]"
             />
           </div>
-          <div className="space-y-4 md:w-[65%] w-full ">
+          <div className="space-y-4 md:w-[65%] w-full">
             <CardHeader className="">
               <CardTitle className="md:text-[40px] text-3xl md:text-left text-center">
                 {item.heading}
@@ -51,13 +50,10 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
             <CardContent className="md:text-left text-center text-base">
               <p>{item.description}</p>
             </CardContent>
-
           </div>
         </Card>
       </motion.div>
     </div>
-    
-        
   );
 };
 

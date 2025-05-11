@@ -14,7 +14,6 @@ export default function Home() {
           className="sticky top-0 z-10 h-screen overflow-hidden bg-black"
           id="home"
         >
-
           <video
             className="absolute top-0 left-0 w-full h-full object-cover opacity-40 hidden md:block"
             autoPlay
@@ -69,24 +68,27 @@ export default function Home() {
       <section>
         <Intro />
       </section>
-      <section className="w-full h-[50vh] md:h-[60vh] ">
-        <SlidingCards/>
+      <section className="w-full flex flex-col items-center justify-center">
+        <SlidingCards />
       </section>
       <section className="mb-12" id="FAQ">
         <AccordionInfo />
       </section>
       <section className="flex flex-col items-center justify-center gap-10 ">
-        <h1 className="text-center font-semibold text-3xl sticky top-0">
+        <h1 className="text-center font-semibold text-[26px] sticky top-0">
           Proven Projects And Their Results{" "}
         </h1>
         <ScrollCard />
-        <div className="md:mt-0 -mt-40 py-5 flex flex-col justify-center items-center" id="intro_button">
-              <Link href="/Formpage">
-                <button className="px-6 py-3 bg-white text-black rounded-full border border-black shadow-md hover:bg-none hover:bg-[#334960] hover:text-white border transition duration-300">
-                  Contact Us
-                </button>
-              </Link>
-            </div>
+        <div
+          className="md:mt-0 -mt-60 mb-10 py-5 flex flex-col justify-center items-center"
+          id="intro_button"
+        >
+          <Link href="/Formpage">
+            <button className="px-6 py-3 bg-white text-black rounded-full border border-black shadow-md hover:bg-none hover:bg-[#334960] hover:text-white transition duration-300">
+              Contact Us
+            </button>
+          </Link>
+        </div>
       </section>
       <Footer />
     </div>
