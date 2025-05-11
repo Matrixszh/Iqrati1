@@ -2,7 +2,7 @@ import Link from "next/link";
 import LogoSlider from "@/components/LogoSlider";
 import Footer from "@/components/Footer";
 import AppointmentForm from "./AppointmentForm";
-
+/* commiting for vercel*/
 export default function Home() {
   return (
     <div className="bg-white">
