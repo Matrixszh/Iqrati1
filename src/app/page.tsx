@@ -16,44 +16,43 @@ export default function Home() {
       </Link>
 
       <main className="overflow-hidden">
-        <section
-          className="sticky top-0 z-10 h-screen overflow-hidden bg-black"
+      <section className="sticky top-0 z-10 h-screen overflow-hidden bg-black"
           id="home"
         >
+          {/* Desktop Video */}
           <video
             className="absolute top-0 left-0 w-full h-full object-cover opacity-40 hidden md:block"
             autoPlay
             loop
             muted
             playsInline
-            preload="none"
+            disablePictureInPicture
+            disableRemotePlayback
+            preload="hidden"
+
           >
             <source src="/bg.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
+
+          {/* Mobile Video */}
           <video
             className="absolute top-0 left-0 w-full h-full object-cover opacity-40 md:hidden"
             autoPlay
             loop
             muted
             playsInline
-            preload="none"
+            disablePictureInPicture
+            disableRemotePlayback
           >
             <source src="/bg.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
 
+          {/* Content remains same */}
           <div className="relative flex flex-col items-center justify-center h-screen space-y-8 md:space-y-12">
-            <p
-              className="text-md md:text-lg lg:text-2xl font-normal text-center text-white md:max-w-[80vw] max-w-[90vw]"
-              id="intro_content"
-            >
+            <p className="text-md md:text-lg lg:text-2xl font-normal text-center text-white md:max-w-[80vw] max-w-[90vw]">
               DISCOVER IQRATI
             </p>
-            <p
-              className="text-white md:text-7xl lg:text-7xl text-4xl text-center px-12 md:px-6"
-              id="intro_main"
-            >
+            <p className="text-white md:text-7xl lg:text-7xl text-4xl text-center px-12 md:px-6">
               Smart Solutions for a Digital World
             </p>
           </div>
@@ -69,7 +68,7 @@ export default function Home() {
       </section>
 
       <section className="py-12 md:py-16">
-        <div className="w-full flex flex-col items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center overflow-hidden">
           <SlidingCards />
         </div>
       </section>

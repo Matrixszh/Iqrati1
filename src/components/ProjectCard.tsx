@@ -15,7 +15,7 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
   const opacityValue = useTransform(cardScrollProgress, [0, 1], [0, 1]);
   const bgOpacityValue = useTransform(cardScrollProgress, [0, 1], [0.1, 0.2]);
 
-  const topPosition = 160 + index * 40;
+  const topPosition = 80 + index * 40;
 
   return (
     <div
