@@ -3,7 +3,7 @@ import React from 'react';
 
 const Intro= () => {
   return (
-    <section className="relative w-full py-16 md:py-24 text-black">
+    <section className="relative w-full text-black">
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Section: Heading */}
         <div className="flex flex-col items-center justify-center md:justify-start md:items-start w-full md:w-1/2">

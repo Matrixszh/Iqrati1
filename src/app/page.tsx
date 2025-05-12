@@ -39,7 +39,6 @@ export default function Home() {
             className="absolute top-0 left-0 w-full h-full object-cover opacity-40 md:hidden"
             autoPlay
             loop
-            muted
             playsInline
             disablePictureInPicture
             disableRemotePlayback
@@ -63,7 +62,7 @@ export default function Home() {
         <LogoSlider />
       </section>
 
-      <section className="py-12 md:py-16">
+      <section className="py-1 md:py-16">
         <Intro />
       </section>
 
