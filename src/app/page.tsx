@@ -9,7 +9,7 @@ import SlidingCards from "@/components/SlidingCards";
 export default function Home() {
   return (
     <div className="bg-white relative">
-      <Link href="/Formpage">
+      <Link href="/Formpage#form">
         <button className="fixed bottom-6 right-6 z-50 px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-[#334960] transition duration-300 border border-white md:px-8 md:py-4 md:bottom-8 md:right-8 hover:cursor-pointer">
           Contact Us
         </button>
