@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       {
         url: new URL("/ex2.png", baseUrl).toString(),
         width: 1200,
-        height: 1200,
+        height: 600,
         alt: "Ghaffar Enterprises Square Logo",
       },
       {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       {
         url: new URL("/ex2.png", baseUrl).toString(),
         width: 1200,
-        height: 1200,
+        height: 600,
         alt: "Ghaffar Enterprises Square Logo",
       },
     ],
