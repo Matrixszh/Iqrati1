@@ -13,9 +13,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = "https://ghaffarenterprises.com/";
 export const metadata: Metadata = {
-  title: "Iqrati",
-  description: "Smart Solutions for a Digital World",
+  metadataBase: new URL(baseUrl),
+  title: "Ghaffar Enterprises",
+  openGraph: {
+    title: "Ghaffar Enterprises",
+    images: [
+      {
+        url: new URL("/logo_meta.png", baseUrl).toString(),
+        width: 1200,
+        height: 1200,
+        alt: "Ghaffar Enterprises Square Logo",
+      },
+      {
+        url: new URL("/logo_meta.png", baseUrl).toString(),
+        width: 1200,
+        height: 630,
+        alt: "Ghaffar Enterprises Rectangle Logo",
+      },
+    ],
+    type: "website",
+    url: baseUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ghaffar Enterprises",
+    images: [
+      {
+        url: new URL("/logo_meta.png", baseUrl).toString(),
+        width: 1200,
+        height: 1200,
+        alt: "Ghaffar Enterprises Square Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
